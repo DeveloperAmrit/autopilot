@@ -21,8 +21,14 @@
             "type": "npm",
             "script": "watch:esbuild",
             "group": "build",
-            "problemMatcher": "$esbuild-watch",
-            "isBackground": true,
+            "problemMatcher": {
+                "base": "$tsc-watch",
+                "background": {
+                "activeOnStart": true,
+                "beginsPattern": ".*",
+                "endsPattern": ".*"
+                }
+            },
             "label": "npm: watch:esbuild",
             "presentation": {
                 "group": "watch",
